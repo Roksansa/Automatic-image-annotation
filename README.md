@@ -1,5 +1,5 @@
 # Automatic-image-annotation
-cnn tags automatic-annotation keras image-annotation
+cnn tags automatic-annotation keras image-annotation word2vec python
 
 used OpenImage dataset https://github.com/openimages/dataset
 used Word2Vec model - word2vec-GoogleNews-vectors https://github.com/mmihaltz/word2vec-GoogleNews-vectors 
