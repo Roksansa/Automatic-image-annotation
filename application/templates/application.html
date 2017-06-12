@@ -1,0 +1,40 @@
+<!doctype html>
+{% load staticfiles %}
+<html>
+<head>
+	<link rel="stylesheet" href="{% static 'css/application.css' %}">
+    <meta charset="utf-8" />
+    <title>Search</title>
+</head>
+<body>
+<div id="page">
+<div id="header">
+    {% if form.errors %}
+        <p style="color: red;">Пожалуйста, выберите другое изображение.</p>
+    {% endif %}
+	<p>
+	Выберите изображение для анализа
+	</p>
+    <form action="" enctype="multipart/form-data" method="post">
+        {% for field in form %}
+            <p>
+                <label>Изображение</label>
+ 
+                {{ field }}
+ 
+                {{ field.errors }}
+            </p>
+        {% endfor %}
+        <input type="submit" value="Отправить">
+         {% csrf_token %}
+    </form>
+	{% if uploaded_file_url %}
+		<p><img src="{{ uploaded_file_url }}" alt ="img.jpg" width="auto" height="150px"></p>
+	{% endif %}
+	{% if result %}
+		<p>Результат: <div>{{ result }}</div></p>
+	{% endif %}
+	
+</div>
+</body>
+</html>

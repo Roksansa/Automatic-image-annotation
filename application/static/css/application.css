@@ -1,0 +1,19 @@
+body{
+	background:url(bg-body.gif);
+	height:auto;
+	width:auto;
+	margin:0 auto;
+}
+#page{
+	background:url(bg-page.gif) no-repeat center;
+	height:auto;
+	width:auto;
+	margin:0 auto;
+	position:absolute;
+}
+#header{
+	font-family: arial;
+	width:900px;
+	margin:0 100px 100px 200px;
+	position:relative;
+}
